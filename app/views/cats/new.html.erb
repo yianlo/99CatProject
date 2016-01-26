@@ -1,0 +1,35 @@
+<form action = "/cats/new" method = "post">
+  <div>
+    <label for cats[:name]>Name:</label>
+    <input type = "text" name = cats[:name] />
+  </div>
+
+  <div>
+    <label for cats[:birth_date]>Birth Date:</label>
+    <input type= "date" name = cats[:birth_date] />
+  </div>
+
+  <div>
+    <label for cats[:sex]>Sex:</label>
+    <input type="radio" name = cats[:sex] value = "Male"> Male
+    <input type="radio" name = cats[:sex] value = "Female"> Female
+  </div>
+
+  <div>
+    <label for cats[:color]>Color:</label>
+    <select name=cats[:color]>
+      <option ></option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="orange">Orange</option>
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+  </div>
+
+  <div>
+    <label for cats[:description]>Description:</label><br/>
+    <textarea name = cats[:description]></textarea>
+  </div>
+
+</form>

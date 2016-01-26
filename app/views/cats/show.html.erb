@@ -1,0 +1,19 @@
+<p> Welcome to <%= @cat.name%>'s page!</p>
+
+<!-- <% @cat.attributes.each do |key, val| %>
+  <%= "#{key.capitalize}: #{val}" unless ["id", "created_at", "updated_at"].include?(key) %>
+  <br/>
+  <br/>
+<% end %> -->
+
+<table>
+<% @cat.attributes.each do |key, val| %>
+ <% unless ["id", "created_at", "updated_at"].include?(key) %>
+    <tr>
+      <td><%= "#{key.capitalize}:" %>
+      <td><%= "#{val}" %>
+    </tr>
+  <% end %>
+<% end %>
+
+</table>

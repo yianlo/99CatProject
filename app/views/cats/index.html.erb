@@ -1,0 +1,9 @@
+
+<title><%= "Cat Names".upcase %></title>
+
+<p><%= "Cat Names".upcase %></p>
+
+<% @cats.each do |cat| %>
+  <%= link_to cat.name, cat_url(cat) %>
+  <br/>
+<% end %>
