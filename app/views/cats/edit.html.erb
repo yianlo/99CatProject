@@ -1,0 +1,39 @@
+<form action = "/cats/<%=params[:id]%>" method = "post">
+  <input type = "hidden" name = "_method" value = "patch"/>
+
+  <div>
+    <label for cat[name]>Name:</label>
+    <input type = "text" name = cat[name] value = "<%= @cat.name %>">
+  </div>
+
+  <!-- <div>
+    <label for cat[birth_date]>Birth Date:</label>
+    <input type= "date" name = cat[birth_date] />
+  </div> -->
+
+  <div>
+    <label for cat[sex]>Sex:</label>
+    <input type="radio" name = cat[sex] value = "M" <%=checked = "checked" if @cat.sex == "M"%> > Male
+    <input type="radio" name = cat[sex] value = "F" <%=checked = "checked" if @cat.sex == "F"%> > Female
+  </div>
+
+  <div>
+    <label for cat[color]>Color:</label>
+    <select name=cat[color]>
+      <option ></option>
+      <option value="red" <%=selected = "selected" if @cat.color == "red"%> >Red</option>
+      <option value="blue" <%=selected = "selected" if @cat.color == "blue"%> >Blue</option>
+      <option value="orange" <%=selected = "selected" if @cat.color == "orange"%> >Orange</option>
+      <option value="white" <%=selected = "selected" if @cat.color == "white"%> >White</option>
+      <option value="black" <%=selected = "selected" if @cat.color == "black"%> >Black</option>
+    </select>
+  </div>
+
+  <div>
+    <label for cat[description]>Description:</label><br/>
+    <textarea name = cat[description] ><%= @cat.description %></textarea>
+
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
