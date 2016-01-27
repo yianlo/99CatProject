@@ -4,7 +4,8 @@ class CatRentalRequest < ActiveRecord::Base
   validates :start_date, presence: true
   validates :end_date, presence: true
   validate :overlapping_approved_requests
-
+  # TODO validate end_date comes after start_date
+  
   belongs_to :cat,
     foreign_key: :cat_id,
     primary_key: :id,

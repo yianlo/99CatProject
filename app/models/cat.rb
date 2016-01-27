@@ -3,7 +3,7 @@ class Cat < ActiveRecord::Base
   color_options = ["red", "blue", "orange", "black", "white"]
   validates :color, presence: true, inclusion: { in: color_options }
   validates :name, presence: true
-  validates :sex, presence: true, inclusion: {in: ["M", "F"]}
+  validates :sex, presence: true, inclusion: {in: ["M", "F"]} #%w(M F)
 
   has_many :cat_rental_requests,
     foreign_key: :cat_id,
