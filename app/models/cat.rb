@@ -5,4 +5,10 @@ class Cat < ActiveRecord::Base
   validates :name, presence: true
   validates :sex, presence: true, inclusion: {in: ["M", "F"]}
 
+  has_many :cat_rental_requests,
+    foreign_key: :cat_id,
+    primary_key: :id,
+    class_name: 'CatRentalRequest',
+    dependent: :destroy
+
 end

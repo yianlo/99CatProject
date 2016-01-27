@@ -14,6 +14,6 @@ Cat.create!(birth_date: "2005/3/02", name: "Betsy", color: "black", sex: "F", de
 
 
 CatRentalRequest.create!(cat_id: 1, start_date: "2015/01/20", end_date: "2015/02/20", status: "APPROVED")
-CatRentalRequest.create!(cat_id: 1, start_date: "2015/02/10", end_date: "2015/02/20", status: "APPROVED")
 CatRentalRequest.create!(cat_id: 3, start_date: "2015/10/20", end_date: "2015/11/20", status: "PENDING")
 CatRentalRequest.create!(cat_id: 2, start_date: "2015/01/25", end_date: "2015/02/20", status: "DENIED")
+CatRentalRequest.create!(cat_id: 1, start_date: "2015/02/10", end_date: "2015/02/20", status: "APPROVED")
